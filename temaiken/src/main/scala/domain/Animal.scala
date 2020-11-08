@@ -4,6 +4,7 @@ trait Animal {}
 
 object Animal {
 
-  case class Trigre() extends Animal
+  case class Tigre() extends Animal
+  case class Aguila() extends Animal
 
 }
