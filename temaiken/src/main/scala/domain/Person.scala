@@ -1,7 +1,10 @@
 package domain
-  case class Person (location:Location,name:String
-                    )
 
-object Person {
-
+case class Person(
+    name: String,
+    location: Location
+) {
+  def showLocation = s"The person $name is in $location"
 }
+
+object Person {}
