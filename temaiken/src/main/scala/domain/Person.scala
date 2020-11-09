@@ -1,21 +1,20 @@
 package domain
 
-import java.rmi.server.RemoteStub
-
 object Person {
 
   case class Person(
   name: String,
   location: Location,
-  genre : String,
-  years : Years
+  genre : Genre,
+  age :Age
   )
-  val MALE="male"
-  val FEMALE="female"
+  trait Genre
+  case object Male extends Genre
+  case object Female extends Genre
 
-  case class Years (
-  5;70
-  )
+  case class  Age (age:Int
+                   )
+
 
 }
 

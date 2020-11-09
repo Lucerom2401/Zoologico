@@ -1,44 +1,45 @@
 package application
 
-import domain.Location.{Acuario, Aviario, Terrario,Restroom,Taquilla,Cafeteria}
-import domain.Person.{Person,Sex, Years}
+import domain.Location._
+import domain.Person._
 
 object PersonLocationDemo extends App {
 
   val lucero: Person = Person(
     name = "Lucero",
-    location = Terrario()
+    location = Terrario(),
+    age = Age(21),
+    genre = Female
   )
 
-  println(lucero.showLocation)
-
-  val miguel: Person= Person(
-    name= "Miguel",
+  val miguel: Person = Person(
+    name = "Miguel",
     location = Acuario(),
-    sex=,
-    years = 18
-
+    age = Age(25),
+    genre = Male
   )
 
-  val maria: Person= Person (
-    name= "Maria",
-    location = Aviario()
-
+  val maria: Person = Person(
+    name = "Maria",
+    location = Aviario(),
+    age = Age(21),
+    genre = Female
   )
 
-  val mathias: Person= Person (
-    name= "Mathias",
-    location= Cafeteria,
-
+  val mathias: Person = Person(
+    name = "Mathias",
+    location = Cafeteria,
+    age = Age(21),
+    genre = Male
   )
 
-  val juan: Person= Person (
-    name= "Juan",
-    location = Restroom,
-    genre= ???,
-    years = ???
+  val juan: Person = Person(
+    name = "Juan",
+    location = Restroom(id = "Terarrio", genre = Male),
+    age = Age(28),
+    genre = Male
   )
-  val persons= List(lucero,miguel,maria,mathias,juan)
+  val persons = List(lucero, miguel, maria, mathias, juan)
 
   persons.foreach(println)
 
