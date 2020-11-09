@@ -1,10 +1,24 @@
 package domain
 
-case class Person(
-    name: String,
-    location: Location
-) {
-  def showLocation = s"The person $name is in $location"
+import java.rmi.server.RemoteStub
+
+object Person {
+
+  case class Person(
+  name: String,
+  location: Location,
+  genre : String,
+  years : Years
+  )
+  val MALE="male"
+  val FEMALE="female"
+
+  case class Years (
+  5;70
+  )
+
 }
 
-object Person {}
+
+
+

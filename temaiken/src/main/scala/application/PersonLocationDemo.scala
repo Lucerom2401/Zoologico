@@ -1,7 +1,7 @@
 package application
 
-import domain.Location.{Acuario, Aviario, Terrario}
-import domain.Person
+import domain.Location.{Acuario, Aviario, Terrario,Restroom,Taquilla,Cafeteria}
+import domain.Person.{Person,Sex, Years}
 
 object PersonLocationDemo extends App {
 
@@ -14,15 +14,31 @@ object PersonLocationDemo extends App {
 
   val miguel: Person= Person(
     name= "Miguel",
-    location = Acuario()
+    location = Acuario(),
+    sex=,
+    years = 18
+
   )
 
   val maria: Person= Person (
     name= "Maria",
     location = Aviario()
+
   )
 
-  val persons= List(lucero,miguel,maria)
+  val mathias: Person= Person (
+    name= "Mathias",
+    location= Cafeteria,
+
+  )
+
+  val juan: Person= Person (
+    name= "Juan",
+    location = Restroom,
+    genre= ???,
+    years = ???
+  )
+  val persons= List(lucero,miguel,maria,mathias,juan)
 
   persons.foreach(println)
 
