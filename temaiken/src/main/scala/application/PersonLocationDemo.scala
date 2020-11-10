@@ -39,7 +39,13 @@ object PersonLocationDemo extends App {
     age = Age(28),
     genre = Male
   )
-  val persons = List(lucero, miguel, maria, mathias, juan)
+  val jose: Zooworkers = Zooworkers(
+    name = "Jose",
+    homework = "Feed",
+    isInChargeOf = "Piguino",
+    location = Acuario()
+  )
+  val persons = List(lucero, miguel, maria, mathias, juan, jose)
 
   persons.foreach(println)
 
