@@ -1,25 +1,9 @@
 package application
 
-import domain.AnimalKind._
-import domain.Location._
-import domain.Person._
+import application.ZooworkerDemo.luceroZooworker
+import domain.Person.Zooworkers
 
-object ZooworkerDemo extends App {
-
-  val lucero: Person = Person(
-    name = "Lucero",
-    location = Terrario(),
-    age = Age(21),
-    genre = Female
-  )
-
-  val tigreAlex = Animal("Alex", kind = Tiger)
-  val luceroZooworker = Zooworkers(
-    name = lucero.name,
-    homework = "No hace nada",
-    isInChargeOf = Animal("Alex", kind = Tiger),
-    location = Terrario()
-  )
+object HorasTrabajadas {
 
   case class HoraDelDia(hora: String)
   val horasDelDia = Seq(
@@ -43,6 +27,5 @@ object ZooworkerDemo extends App {
       case _ => luceroZooworker.copy("No trabaja a esas horas!")
     }
 
-  cosasQueHizoLucero.foreach(println)
-
+  def conseguirLasHorasQueTrabajoLuceroHoy(): Int = cosasQueHizoLucero.size
 }

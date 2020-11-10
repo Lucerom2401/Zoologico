@@ -17,7 +17,7 @@ object Person {
   case class Zooworkers(
       name: String,
       homework: String,
-      isInChargeOf: String,
+      isInChargeOf: AnimalReference,
       location: Location
   )
 

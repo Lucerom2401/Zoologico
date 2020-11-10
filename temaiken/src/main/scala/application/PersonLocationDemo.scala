@@ -1,5 +1,6 @@
 package application
 
+import domain.AnimalKind._
 import domain.Location._
 import domain.Person._
 
@@ -42,7 +43,7 @@ object PersonLocationDemo extends App {
   val jose: Zooworkers = Zooworkers(
     name = "Jose",
     homework = "Feed",
-    isInChargeOf = "Piguino",
+    isInChargeOf = Pinguino,
     location = Acuario()
   )
   val persons = List(lucero, miguel, maria, mathias, juan, jose)
